@@ -18,6 +18,8 @@ trait Redirect
         if ($parameters['status']) {
             $html .= "<form id='behpardakht_go' action='$parameters[$method]' method='post'>";
             $html .= "<input type='hidden' name='RefId' value='{$parameters['RefId']}'>";
+            if (isset($parameters['mobile']))
+                $html .= "<input type='hidden' name='MobileNo' value='{$parameters['mobile']}'>";
             $html .= "</form><script>document.getElementById('behpardakht_go').submit();</script>";
             $html .= "";
         } else {
