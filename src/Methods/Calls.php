@@ -69,4 +69,12 @@ trait Calls
     {
         return $this->lang;
     }
+
+
+    /**
+     * @return integer
+     */
+    public static function generateOrderId($id) {
+        return date("His") . str_pad($id, 6, '0');
+    }
 }
