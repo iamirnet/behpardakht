@@ -4,13 +4,13 @@ namespace iAmirNet\BehPardakht\Methods;
 
 trait bpPayRequest
 {
-    public function bpPayRequest($amount, $callbackURL, $currency = "IRT", $data= '', $payload = 0)
+    public function bpPayRequest($order_id, $amount, $callbackURL, $currency = "IRT", $data= '', $payload = 0)
     {
         if ($currency == "IRT")
             $amount = round($amount * 10);
         if (is_array($data))
             $data = json_encode($data);
-        $InvoiceID = date("His") . '10000' . $this->order->id;
+        $InvoiceID = $order_id;
         $localDate = date('Ymd');
         $localTime = date('Gis');
         $parameters = array(

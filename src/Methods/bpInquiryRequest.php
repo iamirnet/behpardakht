@@ -13,6 +13,6 @@ trait bpInquiryRequest
             'saleReferenceId' => $verifySaleReferenceId
         ];
         $result = $this->request('bpInquiryRequest', $parameters);
-        return ['status' => $result == '0', 'msg' => $this->getError($result)];
+        return ['status' => $result == '0', 'code' => $result, 'msg' => $this->getError($result)];
     }
 }

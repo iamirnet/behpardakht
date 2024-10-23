@@ -55,22 +55,6 @@ trait Calls
     }
 
     /**
-     * @return mixed
-     */
-    public function getOrder()
-    {
-        return $this->order;
-    }
-
-    /**
-     * @param mixed $order
-     */
-    public function setOrder($order): void
-    {
-        $this->order = $order;
-    }
-
-    /**
      * @param string $lang
      */
     public function setLang(string $lang): void
