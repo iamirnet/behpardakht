@@ -13,7 +13,7 @@ class BehPardakht {
         Methods\bpSettleRequest,
         Methods\bpReversalRequest;
 
-    public $terminalId, $userName, $password, $order, $lang = 'fa';
+    public $terminalId, $userName, $password, $lang = 'fa';
 
     public function __construct($terminalId, $userName, $password)
     {
