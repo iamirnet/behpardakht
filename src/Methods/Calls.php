@@ -75,6 +75,6 @@ trait Calls
      * @return integer
      */
     public static function generateOrderId($id) {
-        return date("His") . str_pad($id, 6, '0', STR_PAD_LEFT);
+        return date("YmdHis") . str_pad($id, 6, '0', STR_PAD_LEFT);
     }
 }
